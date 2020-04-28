@@ -16,8 +16,8 @@
 - butoane mari, atractive
 - imagini si scenarii interesante
 4.Integrare cu alte limbaje/sisteme
-- integrare vizuala cu C#, transfer cod sursa din C++ in C#
+- integrare vizuala cu C# / UNITY, transfer cod sursa din C++ / UNITYin C#
 5.Limbaje folosite
-C++ / C#
+C++ / C# / Unity engine
 6.Cum face app. viata mea mai buna?
 Entertainment, alunga plictiseala, competitiv si distractie.

@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(695, 344);
             this.ForeColor = System.Drawing.Color.DarkCyan;
             this.Name = "Form1";
-            this.Text = "Snake";
+            this.Text = "SnakeGame";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

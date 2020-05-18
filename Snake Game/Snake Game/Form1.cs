@@ -28,7 +28,7 @@ namespace Snake_Game
         //Database variables
         static String path = Path.GetFullPath(Environment.CurrentDirectory);
         static String dataBaseName = "data.mdf";
-        string connectionString = @"Data Source=(localdb)MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBaseName + "; Integrated Security=True;";
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBaseName + "; Integrated Security=True;";
         public Form1()
         {
             InitializeComponent();

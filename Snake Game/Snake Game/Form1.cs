@@ -163,6 +163,8 @@ namespace Snake_Game
                     point = newPoint;
                 }
             }
+
+            changingDirection = false;
         }
 
         //Now handle user input to control snake

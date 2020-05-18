@@ -36,7 +36,7 @@ namespace Snake_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            UpdateScoreBoard();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -344,6 +344,16 @@ namespace Snake_Game
                     throw;
                 }
             }
+        }
+
+        private void nameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -61,6 +61,16 @@ namespace Snake_Game
             drawSnake();
             drawFood();
 
+            timer1.Start();
+
+            //Disable some controls
+            trackBar1.Enabled = false;
+            startButton.Enabled = false;
+            nameBox.Enabled = false;
+
+            //Enable Stop button
+            stopButton.Enabled = true;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

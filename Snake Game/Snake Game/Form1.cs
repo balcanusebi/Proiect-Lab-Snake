@@ -126,7 +126,7 @@ namespace Snake_Game
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Move();
+            move();
         }
 
         private void move()
@@ -163,6 +163,33 @@ namespace Snake_Game
                     point = newPoint;
                 }
             }
+        }
+
+        //Now handle user input to control snake
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if(keyData == (Keys.Up) && direction != "Down" && changingDirection != true)
+            {
+                direction = "Up";
+                changingDirection = true;
+            }
+            if (keyData == (Keys.Down) && direction != "Up" && changingDirection != true)
+            {
+                direction = "Down";
+                changingDirection = true;
+            }
+            if (keyData == (Keys.Left) && direction != "Right" && changingDirection != true)
+            {
+                direction = "Left";
+                changingDirection = true;
+            }
+            if (keyData == (Keys.Right) && direction != "Left" && changingDirection != true)
+            {
+                direction = "Right";
+                changingDirection = true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)

@@ -59,7 +59,7 @@ namespace Snake_Game
 
             //Start game
             drawSnake();
-            //drawFood();
+            drawFood();
 
             timer1.Start();
 
@@ -89,6 +89,41 @@ namespace Snake_Game
             }
         }
 
+        private void drawFood()
+        {
+            Random rnd = new Random();
+            int Xrand = rnd.Next(38) * 15;
+            int Yrand = rnd.Next(30) * 15;
+
+            bool isOnSnake = true;
+
+            //check if food is on snake body
+            while (isOnSnake)
+            {
+                for (int i = 0; i < snakeSize; i++)
+                {
+                    if (snakeParts[i].Location == new Point (Xrand, Yrand))
+                    {
+                        Xrand = rnd.Next(38) * 15;
+                        Yrand = rnd.Next(30) * 15;
+                    }
+                    else
+                    {
+                        isOnSnake = false;
+                    }
+                }
+            }
+            //Now draw food
+            if (isOnSnake == false)
+            {
+                foodLocation = new Point(Xrand, Yrand);
+                food.Size = new Size(15, 15);
+                food.BackColor = Color.Yellow;
+                food.BorderStyle = BorderStyle.FixedSingle;
+                food.Location = foodLocation;
+                gamePanel.Controls.Add(food);
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
 

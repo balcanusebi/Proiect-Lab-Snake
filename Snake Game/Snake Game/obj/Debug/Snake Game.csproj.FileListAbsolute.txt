@@ -1,0 +1,10 @@
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\bin\Debug\Snake Game.exe.config
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\bin\Debug\Snake Game.exe
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\bin\Debug\Snake Game.pdb
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake Game.csprojResolveAssemblyReference.cache
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake_Game.Form1.resources
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake_Game.Properties.Resources.resources
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake Game.csproj.GenerateResource.Cache
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake Game.csproj.CoreCompileInputs.cache
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake Game.exe
+C:\Users\Just4AppL3\Documents\GitHub\Proiect-Lab-Snake\Snake Game\Snake Game\obj\Debug\Snake Game.pdb

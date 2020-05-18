@@ -128,5 +128,12 @@ namespace Snake_Game
         {
 
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            //Change interval of timer with the value of speed trackbar
+            timer1.Interval = 501 - (5 * trackBar1.Value);
+
+        }
     }
 }

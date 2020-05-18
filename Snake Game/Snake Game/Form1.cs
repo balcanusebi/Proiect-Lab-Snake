@@ -59,7 +59,7 @@ namespace Snake_Game
 
             //Start game
             drawSnake();
-            drawFood();
+            //drawFood();
 
             timer1.Start();
 
@@ -71,6 +71,22 @@ namespace Snake_Game
             //Enable Stop button
             stopButton.Enabled = true;
 
+        }
+
+        private void drawSnake()
+        {
+            snakeParts = new PictureBox[snakeSize];
+
+            //Loop for drawing each snake part one after another
+            for (int i=0; i < snakeSize; i++)
+            {
+                snakeParts[i] = new PictureBox();
+                snakeParts[i].Size = new Size(15, 15);
+                snakeParts[i].BackColor = Color.Red;
+                snakeParts[i].BorderStyle = BorderStyle.FixedSingle;
+                snakeParts[i].Location = new Point(location.X - (15 * i), location.Y);
+                gamePanel.Controls.Add(snakeParts[i]);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

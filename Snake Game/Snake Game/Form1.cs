@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,11 @@ namespace Snake_Game
         //Food defaults
         PictureBox food = new PictureBox();
         Point foodLocation = new Point(0, 0);
+
+        //Database variables
+        static String path = Path.GetFullPath(Environment.CurrentDirectory);
+        static String dataBaseName = "data.mdf";
+        string connectionString = @"Data Source=(localdb)MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBaseName + "; Integrated Security=True;";
         public Form1()
         {
             InitializeComponent();
@@ -295,6 +302,9 @@ namespace Snake_Game
         private void UpdateScoreBoard()
         {
             //get data from database and show in Data Grid view
+            string query = "SELECT Date,Name,Scores FROM scores"
+
+            using(SqlConnection con = new SqlConnection(connectionString))
         }
     }
 }

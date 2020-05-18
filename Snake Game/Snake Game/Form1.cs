@@ -165,7 +165,7 @@ namespace Snake_Game
             }
 
             //if snake hits food
-            if (snakeParts[0].Location = foodLocation)
+            if (snakeParts[0].Location == foodLocation)
             {
                 eatFood();
                 drawFood();

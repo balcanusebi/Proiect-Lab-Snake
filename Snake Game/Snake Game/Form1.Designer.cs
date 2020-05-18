@@ -127,6 +127,9 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -139,6 +142,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 84);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(292, 355);
             this.dataGridView1.TabIndex = 10;
@@ -181,7 +185,7 @@
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.Location = new System.Drawing.Point(635, 12);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(127, 35);
+            this.startButton.Size = new System.Drawing.Size(140, 35);
             this.startButton.TabIndex = 7;
             this.startButton.Text = "Începe Joc";
             this.startButton.UseVisualStyleBackColor = true;
@@ -191,7 +195,7 @@
             // 
             this.stopButton.Enabled = false;
             this.stopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopButton.Location = new System.Drawing.Point(781, 10);
+            this.stopButton.Location = new System.Drawing.Point(781, 12);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(127, 35);
             this.stopButton.TabIndex = 8;

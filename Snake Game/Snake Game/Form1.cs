@@ -172,7 +172,7 @@ namespace Snake_Game
             }
 
             //if snake hits any wall
-            if (snakeParts[0].Location.X < 0 || snakeParts[0].Location.X >= 570 || snakeParts.Location.Y < 0 || snakeParts[0].Location.Y >=450)
+            if (snakeParts[0].Location.X < 0 || snakeParts[0].Location.X >= 570 || snakeParts[0].Location.Y < 0 || snakeParts[0].Location.Y >=450)
             {
                 stopGame();
             }
@@ -275,7 +275,12 @@ namespace Snake_Game
             over.TextAlign = ContentAlignment.MiddleCenter;
             over.BringToFront();
 
+            //Fint center point to place label
+            int X = gamePanel.Width / 2 - over.Width / 2;
+            int Y = gamePanel.Width / 2 - over.Height / 2;
+            over.Location = new Point(X, Y);
 
+            gamePanel.Controls.Add(over);
 
         }
     }

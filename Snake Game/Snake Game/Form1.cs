@@ -291,7 +291,7 @@ namespace Snake_Game
             over.BringToFront();
 
             //Add current scores and update score board
-            //addCurrentScoresToDatabase();
+            addCurrentScoresToDatabase();
             UpdateScoreBoard();
         }
 
@@ -318,6 +318,31 @@ namespace Snake_Game
                 dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
                 dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Descending);
+            }
+        }
+
+        private void addCurrentScoresToDatabase()
+        {
+            //insert score label value in database with name and datetime
+            string query = "INSERT INTO scores(Date,Name,Scores) VALUES(@Date,@Name,@Scores);";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = DateTime.Now;
+                cmd.Parameters.Add("@Name", SqlDbType.VarChar).Value = nameBox.Text;
+                cmd.Parameters.Add("@Scores", SqlDbType.Int).Value = scoreLabel.Text;
+
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
     }

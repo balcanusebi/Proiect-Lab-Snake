@@ -291,7 +291,7 @@ namespace Snake_Game
             over.BringToFront();
 
             //Add current scores and update score board
-            addCurrentScoresToDatabase();
+            //addCurrentScoresToDatabase();
             UpdateScoreBoard();
         }
 
@@ -302,9 +302,23 @@ namespace Snake_Game
         private void UpdateScoreBoard()
         {
             //get data from database and show in Data Grid view
-            string query = "SELECT Date,Name,Scores FROM scores"
+            string query = "SELECT Date,Name,Scores FROM scores";
 
-            using(SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+
+                var ds = new DataSet();
+                adapter.Fill(ds);
+
+                dataGridView1.DataSource = ds.Tables[0];
+
+                dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Descending);
+            }
         }
     }
 }

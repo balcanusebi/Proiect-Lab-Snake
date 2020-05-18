@@ -224,5 +224,38 @@ namespace Snake_Game
             //Change interval of timer with the value of speed trackbar
             timer1.Interval = 501 - (5 * trackBar1.Value);
         }
+
+        private void eatFood()
+        {
+            snakeSize++;
+
+            //save old snake and use it to create new bigger snake with incremented rectangle
+            PictureBox[] oldSnake = snakeParts;
+            gamePanel.Controls.Clear();
+            snakeParts = new PictureBox[snakeSize];
+
+            for (int i = 0; i < snakeSize; i++)
+            {
+                snakeParts[i] = new PictureBox();
+                snakeParts[i].Size = new Size(15, 15);
+                snakeParts[i].BackColor = Color.Red;
+                snakeParts[i].BorderStyle = BorderStyle.FixedSingle;
+
+                if (i==0)
+                {
+                    snakeParts[i].Location = foodLocation;
+                }
+                else
+                {
+                    snakeParts[i].Location = oldSnake[i - 1].Location;
+                }
+                gamePanel.Controls.Add(snakeParts[i]);
+            }
+
+            //Update scores
+            int currentScores = Int32.Parse(scoreLabel.Text);
+            int newScore = currentScores + 10;
+            scoreLabel.Text = newScore + "";
+        }
     }
 }

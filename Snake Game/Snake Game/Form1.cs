@@ -257,5 +257,26 @@ namespace Snake_Game
             int newScore = currentScores + 10;
             scoreLabel.Text = newScore + "";
         }
+
+        private void stopGame()
+        {
+            timer1.Stop();
+            startButton.Enabled = true;
+            trackBar1.Enabled = true;
+            stopButton.Enabled = false;
+            nameBox.Enabled = true;
+
+            //Game Over Label
+            Label over = new Label();
+            over.Text = "Game/nOver";
+            over.ForeColor = Color.White;
+            over.Font = new Font("Arial", 100, FontStyle.Bold);
+            over.Size = over.PreferredSize;
+            over.TextAlign = ContentAlignment.MiddleCenter;
+            over.BringToFront();
+
+
+
+        }
     }
 }

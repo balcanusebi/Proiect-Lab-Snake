@@ -136,7 +136,7 @@ namespace Snake_Game
             //Loop for moving each part of snake according to direction
             for (int i = 0; i < snakeSize; i++)
             {
-                if (i==0)
+                if (i == 0)
                 {
                     point = snakeParts[i].Location;
                     if (direction == "Left")
@@ -163,6 +163,31 @@ namespace Snake_Game
                     point = newPoint;
                 }
             }
+
+            //if snake hits food
+            if (snakeParts[0].Location = foodLocation)
+            {
+                eatFood();
+                drawFood();
+            }
+
+            //if snake hits any wall
+            if (snakeParts[0].Location.X < 0 || snakeParts[0].Location.X >= 570 || snakeParts.Location.Y < 0 || snakeParts[0].Location.Y >=450)
+            {
+                stopGame();
+            }
+
+            //if snake hits itself
+            for (int i = 3; i < snakeSize; i++)
+            {
+                if (snakeParts[0].Location == snakeParts[i].Location)
+                {
+                    stopGame();
+                }
+            }
+
+
+
 
             changingDirection = false;
         }

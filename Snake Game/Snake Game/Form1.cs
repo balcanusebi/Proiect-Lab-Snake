@@ -273,7 +273,7 @@ namespace Snake_Game
             over.Font = new Font("Arial", 100, FontStyle.Bold);
             over.Size = over.PreferredSize;
             over.TextAlign = ContentAlignment.MiddleCenter;
-            over.BringToFront();
+            
 
             //Fint center point to place label
             int X = gamePanel.Width / 2 - over.Width / 2;
@@ -281,7 +281,20 @@ namespace Snake_Game
             over.Location = new Point(X, Y);
 
             gamePanel.Controls.Add(over);
+            over.BringToFront();
 
+            //Add current scores and update score board
+            addCurrentScoresToDatabase();
+            UpdateScoreBoard();
+        }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+            stopGame();
+        }
+        private void UpdateScoreBoard()
+        {
+            //get data from database and show in Data Grid view
         }
     }
 }

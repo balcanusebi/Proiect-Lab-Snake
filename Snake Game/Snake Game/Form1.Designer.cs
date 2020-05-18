@@ -142,6 +142,7 @@
             this.stopButton.TabIndex = 8;
             this.stopButton.Text = "Oprește Joc";
             this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
             // label4
             // 

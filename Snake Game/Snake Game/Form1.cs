@@ -126,14 +126,49 @@ namespace Snake_Game
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Move();
+        }
 
+        private void move()
+        {
+            Point point = new Point(0, 0);
+
+            //Loop for moving each part of snake according to direction
+            for (int i = 0; i < snakeSize; i++)
+            {
+                if (i==0)
+                {
+                    point = snakeParts[i].Location;
+                    if (direction == "Left")
+                    {
+                        snakeParts[i].Location = new Point(snakeParts[i].Location.X - 15, snakeParts[i].Location.Y);
+                    }
+                    if (direction == "Right")
+                    {
+                        snakeParts[i].Location = new Point(snakeParts[i].Location.X + 15, snakeParts[i].Location.Y);
+                    }
+                    if (direction == "Up")
+                    {
+                        snakeParts[i].Location = new Point(snakeParts[i].Location.X, snakeParts[i].Location.Y - 15);
+                    }
+                    if (direction == "Down")
+                    {
+                        snakeParts[i].Location = new Point(snakeParts[i].Location.X, snakeParts[i].Location.Y + 15);
+                    }
+                }
+                else
+                {
+                    Point newPoint = snakeParts[i].Location;
+                    snakeParts[i].Location = point;
+                    point = newPoint;
+                }
+            }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             //Change interval of timer with the value of speed trackbar
             timer1.Interval = 501 - (5 * trackBar1.Value);
-
         }
     }
 }

@@ -234,7 +234,7 @@ namespace Snake_Game
 
         private void eatFood()
         {
-            snakeSize++;
+            //snakeSize++;
 
             //save old snake and use it to create new bigger snake with incremented rectangle
             PictureBox[] oldSnake = snakeParts;

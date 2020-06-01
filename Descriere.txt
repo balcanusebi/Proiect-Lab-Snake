@@ -1,9 +1,7 @@
 1.Cerinte
-- sa aiba o baza de date pentru conturi
-- cont de utilizator ca sa poti juca
+- sa aiba o baza de date pentru scor/istoric scor
+- introducere nume jucator
 - scoreboard la sfarsit
-- nivele, in_game bonuses
-- beneficii in joc pentru utilizatorii premium
 2.Functionalitati
 - sa fie stabil
 - sa fie accesibil
@@ -14,10 +12,10 @@
 3.User experience (UX)
 - interfata prietenoasa, simple
 - butoane mari, atractive
-- imagini si scenarii interesante
+- imagini sugestive
 4.Integrare cu alte limbaje/sisteme
-- integrare vizuala cu C# / UNITY, transfer cod sursa din C++ / UNITYin C#
+- integrare vizuala cu C# / arhitectura prototip c++
 5.Limbaje folosite
-C++ / C# / Unity engine
+C++ / C# 
 6.Cum face app. viata mea mai buna?
 Entertainment, alunga plictiseala, competitiv si distractie.

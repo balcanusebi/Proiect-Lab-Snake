@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -282,7 +283,7 @@ namespace Snake_Game
             over.TextAlign = ContentAlignment.MiddleCenter;
             
 
-            //Fint center point to place label
+            //Find center point to place label
             int X = gamePanel.Width / 2 - over.Width / 2;
             int Y = gamePanel.Width / 2 - over.Height / 2;
             over.Location = new Point(X, Y);
